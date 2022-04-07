@@ -2,7 +2,7 @@
 	import Pokeimage from "./Pokeimage.svelte"
 	let searchname;
 	let details;
-	let pokelistpromise = catchpokemon("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151");
+	let pokelistpromise = catchpokemon("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=898");
 	async function catchpokemon(api_link){
 		const res = await fetch(api_link);
 		const data = await res.json();
