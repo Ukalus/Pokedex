@@ -1,8 +1,7 @@
 <script>
 	import Pokeimage from "./Pokeimage.svelte"
 	let searchname;
-	let details;
-	let pokelistpromise = catchpokemon("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=898");
+	let pokelistpromise = catchpokemon("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151");
 	async function catchpokemon(api_link){
 		const res = await fetch(api_link);
 		const data = await res.json();
@@ -20,23 +19,21 @@
 </script>
 
 <main>
-	<p>type in your pokemons name</p>
-	<input bind:value={searchname}>
-	<button on:click={() => (catchpokemon())}></button>
-
-	{#await pokelistpromise}
-		<p>... loading</p>
-	{:then pokelist}
-		{#each pokelist.results as pokemon}
-		{#if pokemon.name == searchname}
-		<p>{pokemon.name}</p>
-		<Pokeimage link="{pokemon.url}"></Pokeimage>
-		
-		{/if}
-		{/each}
-	{:catch error}
-		<p>error</p>
-	{/await}
+	<div class="centerpokedex pokedex">
+		<h1 class="container">Pokedex</h1>
+		<input class="container searchbar" bind:value={searchname} placeholder="Type in your pokemon">
+		{#await pokelistpromise}
+			<p>... loading</p>
+		{:then pokelist}
+			{#each pokelist.results as pokemon}
+				{#if pokemon.name.includes(searchname)}
+				<Pokeimage link="{pokemon.url}"></Pokeimage>
+				{/if}
+			{/each}
+		{:catch error}
+			<p>error</p>
+		{/await}
+	</div>
 	
 
 
