@@ -1,0 +1,6 @@
+- Get all important values for displaying pokemon(Name,Picture,ID,Type,Attacks,Description) DONE
+- creating nice Component to display values DONE
+- Styling Component to look like a pokedex DONE
+- Improve search function IN PROGRESS => Maybe Sort namelist beforehand?
+- Only display 6 finds in search => reduce load 
+- 
