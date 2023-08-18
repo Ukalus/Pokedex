@@ -70,3 +70,27 @@
 		</div>
 	</div>
 {/await}
+
+<style>
+
+p .centercharacter{
+	border: 2px white;
+}
+.pokeimg{
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	background-color: white;
+	width: 96px;
+	border-radius: 50px;
+	margin: 16px;
+	border: 4px rgb(136, 136, 136);
+}
+.pokeimg:hover{
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+	background-color: white;
+	width: 96px;
+	border-radius: 50px;
+	margin: 16px;
+}
+</style>

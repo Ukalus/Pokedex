@@ -39,3 +39,27 @@
 
 </main>
 
+<style>
+	body{
+	background-image: url();
+}
+.pokedex{
+	color: white;
+	width: 200px;
+	height: auto;
+	background: red;
+	border-radius: 10px 80px 10px 10px;
+}
+.searchbar{
+	border-radius: 10px 20px 10px 10px;
+}
+.centerpokedex{
+	margin: auto;
+  	width: 400px;
+  	border: 6px solid rgb(255, 101, 101);
+  	padding: 10px;
+	
+	
+}
+
+</style>
